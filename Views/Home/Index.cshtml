@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to ADPC Medical System</h1>
+    <p class="lead">Your comprehensive platform for managing patients, medical records, checkups, and prescriptions.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Manage Patients</h5>
+                <p class="card-text">Add, edit, and view detailed information about your patients.</p>
+                <a asp-controller="Patients" asp-action="Index" class="btn btn-primary">Go to Patients</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Schedule Checkups</h5>
+                <p class="card-text">Record and manage patient checkups, including various medical procedures.</p>
+                <a asp-controller="Checkups" asp-action="Index" class="btn btn-primary">Go to Checkups</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">View Medical Records</h5>
+                <p class="card-text">Access patient disease history and detailed medical records.</p>
+                <a asp-controller="MedicalRecords" asp-action="Index" class="btn btn-primary">Go to Medical Records</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Manage Medications</h5>
+                <p class="card-text">Handle and update patient prescriptions with ease.</p>
+                <a asp-controller="Medications" asp-action="Index" class="btn btn-primary">Go to Medications</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Export Patient Data</h5>
+                <p class="card-text">Export patient data to CSV format for external analysis and reporting.</p>
+                <a asp-controller="Patients" asp-action="Export" class="btn btn-primary">Export Data</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Upload Medical Files</h5>
+                <p class="card-text">Attach and manage additional files for patient checkups.</p>
+                <a asp-controller="Checkups" asp-action="UploadFiles" class="btn btn-primary">Upload Files</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="mt-5 text-center">
+    <p>&copy; 2025 ADPC Medical System. All rights reserved.</p>
+</footer>
