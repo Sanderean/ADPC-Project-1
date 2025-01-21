@@ -260,3 +260,5 @@ C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\bin\Debug\net8.0\runti
 C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\obj\Debug\net8.0\ADPC-Project-1.sourcelink.json
+C:\Users\andru\source\repos\ADPC-Project-1\ADPC-Project-1\bin\Debug\net8.0\CloudinaryDotNet.dll

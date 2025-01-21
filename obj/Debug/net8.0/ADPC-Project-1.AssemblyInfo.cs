@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADPC-Project-1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9d16eb39d12c4ade14154c499854800df9bd72c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77b1f296d906374bcb0b60b58980c4101d15672f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADPC-Project-1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADPC-Project-1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 using ADPC_Project_1.Models;
+using CloudinaryDotNet;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 
@@ -9,6 +10,15 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<PostgresContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Cloudinary configuration
+var cloudinarySettings = builder.Configuration.GetSection("CloudinarySettings");
+var cloudinary = new Cloudinary(new Account(
+    cloudinarySettings["CloudName"],
+    cloudinarySettings["ApiKey"],
+    cloudinarySettings["ApiSecret"]
+));
+builder.Services.AddSingleton(cloudinary);
 
 var app = builder.Build();
 

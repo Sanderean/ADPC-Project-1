@@ -11,26 +11,48 @@
     <h4>Checkup</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Checkupdate)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Checkupdate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Procedurecode)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Procedurecode)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Patient)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Patient.Id)
         </dd>
     </dl>
-    
+
+    <!-- Список загруженных фотографий -->
+    <div class="form-group">
+        <label>Uploaded Photos</label>
+        <div id="uploaded-photos">
+            @if (Model.Medicalfiles != null && Model.Medicalfiles.Any())
+            {
+                foreach (var file in Model.Medicalfiles)
+                {
+                    <div class="d-flex align-items-center" id="photo-@file.Id">
+                        <img src="@file.Filepath" alt="@file.Filename" style="width: 100px; height: 100px; object-fit: cover;" class="mr-2" />
+                        <span>@file.Filename</span>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No photos uploaded.</p>
+            }
+        </div>
+    </div>
+
+    <!-- Форма удаления Checkup -->
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

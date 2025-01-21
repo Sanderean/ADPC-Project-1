@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ADPC_Project_1.Models;
+using System.Text;
 
 namespace ADPC_Project_1.Controllers
 {
@@ -16,6 +17,21 @@ namespace ADPC_Project_1.Controllers
         public PatientsController(PostgresContext context)
         {
             _context = context;
+        }
+
+        public async Task<IActionResult> ExportToCSV()
+        {
+            var patients = await _context.Patients.ToListAsync();
+
+            var csv = new StringBuilder();
+            csv.AppendLine("Id,Personal ID,Name,Surname,Date of Birth,Sex");
+
+            foreach (var patient in patients)
+            {
+                csv.AppendLine($"{patient.Id},{patient.Personalidentificationnumber},{patient.Name},{patient.Surname},{patient.Dateofbirth},{patient.Sex}");
+            }
+
+            return File(Encoding.UTF8.GetBytes(csv.ToString()), "text/csv", "Patients.csv");
         }
 
         // GET: Patients
